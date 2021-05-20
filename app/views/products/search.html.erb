@@ -4,10 +4,10 @@
     <button style="font-size: 20px;height:30px;width:100px;background-color:#4d79ff">Home</button>  
 </form>
 <form action="/products/search" method="GET"  align="right">
-    <input type="hidden" name="brand" value="<%=@brand%>">
+    <input type="hidden" name="brand" id="brand" value="<%=@brand%>">
     <input type="text" id="key" name="key" size="40" style="font-size:20px;" value="<%=@key%>">
     <button style="font-size: 20px">Search</button>
-    <input type="submit" style="font-size:20px;" onclick="document.getElementById('key').value = ''" value="x">
+    <input type="submit" style="font-size:20px;" onclick="(document.getElementById('key').value = ''),(document.getElementById('brand').value = '')" value="x">
 </form>
 <table align="right" cellpadding = "15">
     <td>
@@ -29,7 +29,7 @@
     <td>
         <form action="/products/search" method="GET" >
             <input type="hidden" name="key" value="<%=@key%>">
-            <select name="brand">
+            <select name="brand" id="brand">
                 <optgroup label="Brand" >
                     <option value="all">All</option>
                     <option value="adidas">Adidas</option>
