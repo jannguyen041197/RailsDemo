@@ -6,14 +6,14 @@
 <form action="/products/search" method="GET"  align="right">
     <input type="hidden" name="brand" value="<%=@brand%>">
     <input type="text" id="key" name="key" size="40" style="font-size:20px;" value="<%=@key%>">
-    <input type="submit" style="font-size:20px;" onclick="document.getElementById('key').value = ''" value="x">
     <button style="font-size: 20px">Search</button>
-    
+    <input type="submit" style="font-size:20px;" onclick="document.getElementById('key').value = ''" value="x">
 </form>
 <table align="right" cellpadding = "15">
     <td>
         <form action="/products/search" method="GET">
             <input type="hidden" name="key" value="<%=@key%>">
+            <input type="hidden" name="brand" value="<%=@brand%>">
             <input type="hidden" name="sort" value="name">
             <button>Sort by name</button>
         </form>
@@ -21,6 +21,7 @@
     <td>
         <form action="/products/search" method="GET">
             <input type="hidden" name="key" value="<%=@key%>">
+            <input type="hidden" name="brand" value="<%=@brand%>">
             <input type="hidden" name="sort" value="price">
             <button>Sort by price</button>
         </form>
