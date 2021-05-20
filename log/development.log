@@ -22551,3 +22551,209 @@ Processing by ProductsController#search as HTML
 Completed 200 OK in 17ms (Views: 14.9ms | ActiveRecord: 0.2ms | Allocations: 5420)
 
 
+Started GET "/" for ::1 at 2021-05-20 13:13:38 +0700
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:45
+  Rendered products/index.html.erb within layouts/application (Duration: 65.9ms | Allocations: 6510)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 138.1ms | Allocations: 12827)
+Completed 200 OK in 177ms (Views: 145.5ms | ActiveRecord: 1.6ms | Allocations: 18167)
+
+
+Started GET "/products/search?brand=&key=" for ::1 at 2021-05-20 13:13:45 +0700
+Processing by ProductsController#search as HTML
+  Parameters: {"brand"=>"", "key"=>""}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:9:in `search'
+  Rendering layout layouts/application.html.erb
+  Rendering products/search.html.erb within layouts/application
+  Rendered products/search.html.erb within layouts/application (Duration: 5.1ms | Allocations: 597)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 56.2ms | Allocations: 4040)
+Completed 200 OK in 64ms (Views: 56.8ms | ActiveRecord: 0.3ms | Allocations: 5396)
+
+
+Started GET "/products/search?brand=&key=" for ::1 at 2021-05-20 13:13:50 +0700
+Processing by ProductsController#search as HTML
+  Parameters: {"brand"=>"", "key"=>""}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:9:in `search'
+  Rendering layout layouts/application.html.erb
+  Rendering products/search.html.erb within layouts/application
+  Rendered products/search.html.erb within layouts/application (Duration: 0.5ms | Allocations: 192)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.9ms | Allocations: 3637)
+Completed 200 OK in 22ms (Views: 16.5ms | ActiveRecord: 0.2ms | Allocations: 4866)
+
+
+Started GET "/products/search?brand=&key=a" for ::1 at 2021-05-20 13:13:53 +0700
+Processing by ProductsController#search as HTML
+  Parameters: {"brand"=>"", "key"=>"a"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:9:in `search'
+  Rendering layout layouts/application.html.erb
+  Rendering products/search.html.erb within layouts/application
+  Rendered products/search.html.erb within layouts/application (Duration: 0.7ms | Allocations: 176)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 21.8ms | Allocations: 3619)
+Completed 200 OK in 27ms (Views: 24.4ms | ActiveRecord: 0.1ms | Allocations: 4838)
+
+
+Started GET "/products/search?brand=&key=b" for ::1 at 2021-05-20 13:13:59 +0700
+Processing by ProductsController#search as HTML
+  Parameters: {"brand"=>"", "key"=>"b"}
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:9:in `search'
+  Rendering layout layouts/application.html.erb
+  Rendering products/search.html.erb within layouts/application
+  Rendered products/search.html.erb within layouts/application (Duration: 0.2ms | Allocations: 142)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 26.8ms | Allocations: 3587)
+Completed 200 OK in 31ms (Views: 27.5ms | ActiveRecord: 0.9ms | Allocations: 4845)
+
+
+Started GET "/products?id=10" for ::1 at 2021-05-20 13:14:05 +0700
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:46:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mComment Load (3.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 10]]
+  ↳ app/views/products/show.html.erb:79
+  Rendered products/show.html.erb within layouts/application (Duration: 70.5ms | Allocations: 8533)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 97.9ms | Allocations: 11889)
+Completed 200 OK in 122ms (Views: 94.2ms | ActiveRecord: 4.5ms | Allocations: 16078)
+
+
+Started GET "/products/edit?id=10&backURL=%2Fproducts%3Fid%3D10" for ::1 at 2021-05-20 13:14:11 +0700
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"10", "backURL"=>"/products?id=10"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:56:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/edit.html.erb within layouts/application (Duration: 8.0ms | Allocations: 358)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 38.7ms | Allocations: 3812)
+Completed 200 OK in 43ms (Views: 40.3ms | ActiveRecord: 0.1ms | Allocations: 4948)
+
+
+Started PATCH "/products" for ::1 at 2021-05-20 13:14:14 +0700
+Processing by ProductsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "backURL"=>"/products?id=10", "id"=>"10", "created_at"=>"2021-05-19 09:38:56 +0700", "product"=>{"name"=>"Giày thể thao", "price"=>"10000000.0", "size"=>"34", "color"=>"Black", "brand"=>"Gucci", "seller"=>"nhat", "description"=>"Sản phẩm chất lượng cao"}}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:60:in `update'
+Redirected to http://localhost:3000/products?id=10
+Completed 302 Found in 12ms (ActiveRecord: 0.2ms | Allocations: 1884)
+
+
+Started GET "/products?id=10" for ::1 at 2021-05-20 13:14:14 +0700
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:46:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 10]]
+  ↳ app/views/products/show.html.erb:79
+  Rendered products/show.html.erb within layouts/application (Duration: 3.2ms | Allocations: 863)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 4306)
+Completed 200 OK in 17ms (Views: 14.6ms | ActiveRecord: 0.3ms | Allocations: 5293)
+
+
+Started GET "/" for ::1 at 2021-05-20 13:14:43 +0700
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:45
+  Rendered products/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 953)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 24.1ms | Allocations: 4396)
+Completed 200 OK in 26ms (Views: 24.5ms | ActiveRecord: 0.2ms | Allocations: 4850)
+
+
+Started GET "/products/new" for ::1 at 2021-05-20 13:14:45 +0700
+Processing by ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 157)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.1ms | Allocations: 3600)
+Completed 200 OK in 21ms (Views: 19.6ms | ActiveRecord: 0.0ms | Allocations: 4210)
+
+
+Started POST "/products" for ::1 at 2021-05-20 13:14:48 +0700
+Processing by ProductsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product"=>{"name"=>"", "price"=>"", "size"=>"", "color"=>"", "brand"=>"", "seller"=>"", "description"=>""}}
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/new.html.erb within layouts/application (Duration: 0.1ms | Allocations: 37)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 26.7ms | Allocations: 3397)
+Completed 200 OK in 30ms (Views: 27.3ms | ActiveRecord: 0.0ms | Allocations: 5447)
+
+
+Started GET "/" for ::1 at 2021-05-20 13:18:37 +0700
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:45
+  Rendered products/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 955)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 78.5ms | Allocations: 4410)
+Completed 200 OK in 81ms (Views: 79.8ms | ActiveRecord: 0.2ms | Allocations: 4865)
+
+
+Started GET "/products/search?key=&sort=name" for ::1 at 2021-05-20 13:24:34 +0700
+Processing by ProductsController#search as HTML
+  Parameters: {"key"=>"", "sort"=>"name"}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/products_controller.rb:9:in `search'
+  [1m[36mProduct Load (5.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:9:in `search'
+  Rendering layout layouts/application.html.erb
+  Rendering products/search.html.erb within layouts/application
+  Rendered products/search.html.erb within layouts/application (Duration: 1.0ms | Allocations: 181)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 45.2ms | Allocations: 3633)
+Completed 200 OK in 108ms (Views: 52.8ms | ActiveRecord: 8.2ms | Allocations: 5590)
+
+
+Started GET "/products?id=7" for ::1 at 2021-05-20 13:24:37 +0700
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:46:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mComment Load (1.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 7]]
+  ↳ app/views/products/show.html.erb:79
+  Rendered products/show.html.erb within layouts/application (Duration: 7.8ms | Allocations: 829)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 27.4ms | Allocations: 4274)
+Completed 200 OK in 34ms (Views: 26.4ms | ActiveRecord: 2.1ms | Allocations: 5300)
+
+
+Started GET "/products/edit?id=7&backURL=%2Fproducts%3Fid%3D7" for ::1 at 2021-05-20 13:24:41 +0700
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"7", "backURL"=>"/products?id=7"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:56:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/edit.html.erb within layouts/application (Duration: 1.7ms | Allocations: 83)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 23.3ms | Allocations: 3526)
+Completed 200 OK in 27ms (Views: 24.0ms | ActiveRecord: 0.1ms | Allocations: 4513)
+
+
