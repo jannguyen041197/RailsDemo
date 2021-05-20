@@ -7,7 +7,8 @@
     <input type="hidden" name="brand" id="brand" value="<%=@brand%>">
     <input type="text" id="key" name="key" size="40" style="font-size:20px;" value="<%=@key%>">
     <button style="font-size: 20px">Search</button>
-    <input type="submit" style="font-size:20px;" onclick="(document.getElementById('key').value = ''),(document.getElementById('brand').value = '')" value="x">
+    <input type="submit" style="font-size:20px;" onclick="(document.getElementById('key').value = ''),
+    (document.getElementById('brand').value = '')" value="x">
 </form>
 <table align="right" cellpadding = "15">
     <td>
@@ -53,25 +54,24 @@
                         <div class="img">
                             <img src="/giay.jpg" width="192px"
                                 height="180px">
-                            </div>
-                            <div class="name">
-                                Name:
-                                <%=product.name%>
-                            </div>
-                            <div class="name">
-                                Color:
-                                <%=product.color%>
-                            </div>
-                            <div class="name">
-                                Brand:
-                                <%=product.brand%>
-                            </div>
-                            <div class="price">
-                                Price: 
-                                <%=product.price%> VND
-                            </div>
-                                
-                            </div>
+                        </div>
+                        <div class="name">
+                            Name:
+                            <%=product.name%>
+                        </div>
+                        <div class="name">
+                            Color:
+                            <%=product.color%>
+                        </div>
+                        <div class="name">
+                            Brand:
+                            <%=product.brand%>
+                        </div>
+                        <div class="price">
+                            Price: 
+                            <%=product.price%> VND
+                        </div>
+                    </div>
                 </button> 
             </form>
         
