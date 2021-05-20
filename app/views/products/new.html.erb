@@ -1,0 +1,55 @@
+<title>Create Product</title>
+<br>
+<form action="/">
+    <button style="font-size: 20px;height:30px;width:100px;background-color:#4d79ff">Home</button>  
+</form>
+<h1 align="center" >New Product</h1>
+
+<form align="center" action="/products" accept-charset="UTF-8" method="POST">
+  <input type="hidden" name="authenticity_token">
+  <table align="center" style="font-size: 20px"cellpadding = "5">
+      <tr>
+        <td>Name:</td>
+        <td>
+          <input type="text" style="font-size: 15px" type="text" name="product[name]" id="product_name" size="50">
+        </td>
+      </tr>
+       <tr>
+        <td>Price: </td>
+        <td>
+          <input type="text" style="font-size: 15px" name="product[price]" id="product_price" size="50">
+        </td>
+      </tr>
+       <tr>
+        <td>Size:</td>
+        <td>
+          <input type="text" style="font-size: 15px" name="product[size]" id="product_size" size="50"> 
+        </td>
+      </tr>
+       <tr>
+        <td>Color:</td>
+        <td>
+          <input type="text" style="font-size: 15px" name="product[color]" id="product_color" size="50">
+        </td>
+      </tr>
+       <tr>
+        <td>Brand:</td>
+        <td>
+          <input type="text" style="font-size: 15px" name="product[brand]" id="product_brand" size="50">
+        </td>
+      </tr>
+       <tr>
+        <td>Seller:</td>
+        <td>
+          <input type="text" style="font-size: 15px" name="product[seller]" id="product_seller" size="50">
+        </td>
+      </tr>
+       <tr>
+        <td>Description:</td>
+        <td>
+          <input type="text" style="font-size: 15px" name="product[description]" id="product_description" size="50">
+        </td>
+      </tr>
+  </table>
+  <button style="font-size: 20px;background-color:#8cff66">Create Product</button>
+</form>

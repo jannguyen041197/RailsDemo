@@ -1,0 +1,103 @@
+<title>Home</title>
+
+<div align="center">
+    <form action="/products/new" method="GET" >
+        <button style="font-size: 30px;background-color:#8cff66">Create new product</button>
+    </form>
+</div>
+<form action="/products/search" method="GET"  align="right">
+    <input type="hidden" name="brand" value="<%=@brand%>">
+    <input type="text" name="key" size="40" style="font-size:20px;">
+    <button style="font-size: 20px">Search</button>
+</form>
+<table align="right" cellpadding = "15">
+    <td>
+        <form action="/products/search" method="GET">
+            <input type="hidden" name="key" vaalue=<%=@key%>>
+            <input type="hidden" name="sort" value="name">
+            <button>Sort by name</button>
+        </form>
+    </td>
+    <td>
+        <form action="/products/search" method="GET">
+            <input type="hidden" name="key" vaalue=<%=@key%>>
+            <input type="hidden" name="sort" value="price">
+            <button>Sort by price</button>
+        </form>
+    </td>
+     <td>
+        <form action="/products/search" method="GET" >
+            <input type="hidden" name="key" value="<%=@key%>">
+            <select name="brand">
+                <optgroup label="Brand" >
+                    <option value="all">All</option>
+                    <option value="adidas">Adidas</option>
+                    <option value="gucci">Gucci</option>
+                    <option value="nike">Nike</option>
+                </optgroup>
+            <input type="submit" value="Filter">
+            </select>
+        </form>
+    </td>
+</table>
+<br><br><br><br>
+
+<%@products.each do |product|%>
+    <div>          
+        <div class="khungsanpham">
+            <form action="/products" method="get">
+                <input type="hidden" name="id" value=<%=product.id%>>
+                <button style="font-size: 14px">
+                    <div class="boder">
+                        <div class="img">
+                            <img src="/giay.jpg" width="192px"
+                                height="180px">
+                            </div>
+                            <div class="name">
+                                Name:
+                                <%=product.name%>
+                            </div>
+                            <div class="name">
+                                Color:
+                                <%=product.color%>
+                            </div>
+                            <div class="name">
+                                Brand:
+                                <%=product.brand%>
+                            </div>
+                            <div class="price">
+                                Price: 
+                                <%=product.price%> VND
+                            </div>
+                                
+                            </div>
+                </button> 
+            </form>
+        
+            <table align="center">
+                <div class="mua">
+                    <td>
+                        <form action="/products/edit" method="GET">
+                            <input type="hidden" name="id" value=<%=product.id%>>
+
+                            <input type="hidden" name="backURL" value="/">
+                            <button style="height:30px;width:100px;background-color:#ffff80">Edit</button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="/products" method="post" data-confirm="Are you sure?">
+                            <input name="_method" type="hidden" value="delete" />
+                            <input type="hidden" name="authenticity_token"> 
+                            <input type="hidden" name="id" value=<%=product.id%>>
+                            <button style="height:30px;width:100px;background-color:#ff704d">Delete</button>
+                        </form>
+                    </td>
+                </div>
+            </table>
+        </div>
+    </div>
+<%end%>
+
+
+
+

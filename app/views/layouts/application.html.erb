@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <style>
+  .khungsanpham {
+	padding-top: 30px;
+	padding-left: 60px;
+	float: left;
+}
+
+.boder {
+	border: solid;
+	width: 220px;
+	height: 320px;
+	border-color: threedlightshadow;
+}
+
+.img {
+	margin-left: 14px;
+	margin-top: 14px;
+	width: 192px;
+	height: 180px;
+}
+
+.price {
+	text-align: center;
+	color: red;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.name {
+	text-align: center;
+	color: black;
+}
+</style>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>
