@@ -7,7 +7,4 @@ class Product < ApplicationRecord
     validates :brand, presence: true
     validates :seller, presence: true
     validates :description, presence: true
-
-    
-
 end

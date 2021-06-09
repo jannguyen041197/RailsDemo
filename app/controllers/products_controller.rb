@@ -32,7 +32,9 @@ class ProductsController < ApplicationController
   
     def new
       @product = Product.new()
+      redirect_to "new"
     end
+
     def create
       @product = Product.new(product_params)
       if @product.save
