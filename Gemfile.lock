@@ -91,11 +91,6 @@ GEM
     factory_bot_rails (4.11.1)
       factory_bot (~> 4.11.1)
       railties (>= 3.0.0)
-    factory_girl (4.9.0)
-      activesupport (>= 3.0.0)
-    factory_girl_rails (4.9.0)
-      factory_girl (~> 4.9.0)
-      railties (>= 3.0.0)
     faker (2.18.0)
       i18n (>= 1.6, < 2)
     ffi (1.15.0)
@@ -247,7 +242,6 @@ DEPENDENCIES
   capybara (>= 3.26)
   database_cleaner
   factory_bot_rails (~> 4.0)
-  factory_girl_rails
   faker
   jbuilder (~> 2.7)
   listen (~> 3.3)
