@@ -9,11 +9,4 @@ FactoryBot.define do
         description {"good"}
     end
     
-    factory :invalid_product do
-        price  { "nhat" }
-    end
-    
-    factory :count do
-        Product.all.length
-    end
   end

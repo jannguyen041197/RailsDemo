@@ -1,10 +1,11 @@
 require 'rails_helper'
 require 'factory_bot_rails'
+
 RSpec.describe ProductsController, type: :controller do
   describe "GET index" do
     it "returns all the product in a list" do
       get :index
-      Product.all.length.should == 9
+      expect(Product.all).to_not be_empty
     end
   end
   describe "GET new" do
@@ -18,21 +19,19 @@ RSpec.describe ProductsController, type: :controller do
     context "with valid attributes" do
       it "creates a new product" do
         expect{
-          post :create,
-          FactoryBot.attributes_for(:product)
-        }.to change(Product,:count)
+          FactoryBot.create(:product)
+        }.to change(Product,:count).by(1)
       end
       
       it "redirects to the new product" do
-        post :create, FactoryBot.attributes_for(:product)
+        post :create, FactoryBot.create(:product)
         expect(response).to redirect_to Product.last
       end
     end
     
     context "with invalid attributes" do
       it "does not save the new product" do
-        expect{
-          post :create, FactoryBot.attributes_for(:invalid_product)
+        expect{FactoryBot.create(:invalid_product)
         }.to_not change(Product,:count)
       end
       
