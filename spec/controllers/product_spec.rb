@@ -15,29 +15,31 @@ RSpec.describe ProductsController, type: :controller do
     end
   end
 
+
   describe "POST create" do
     context "with valid attributes" do
+    
       it "creates a new product" do
         expect{
           FactoryBot.create(:product)
         }.to change(Product,:count).by(1)
       end
-      
+
       it "redirects to the new product" do
-        post :create, FactoryBot.create(:product)
-        expect(response).to redirect_to Product.last
+        FactoryBot.create(:product)
+        expect(response).to render_template :index
       end
     end
     
     context "with invalid attributes" do
       it "does not save the new product" do
-        expect{FactoryBot.create(:invalid_product)
+        expect{FactoryBot.attributes_for(:product)
         }.to_not change(Product,:count)
       end
       
       it "re-renders the new product" do
-        post :create, FactoryBot.attributes_for(:invalid_product)
-        expect(rsponse).to render_template :new
+        FactoryBot.attributes_for(:product)
+        expect(response).to render_template :new
       end
     end
   end
