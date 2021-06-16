@@ -8,5 +8,7 @@ FactoryBot.define do
         seller {"nhat"}
         description {"good"}
     end
-    
+    factory :invalid_product, parent: :product do
+        price  { "price" }
+    end
   end
