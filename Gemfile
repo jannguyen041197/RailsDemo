@@ -54,6 +54,7 @@ group :test do
   gem 'shoulda-matchers', '~> 3.1'
   gem 'faker'
   gem 'database_cleaner'
+  gem 'database_cleaner-active_record'
   
 
   # Easy installation and use of web drivers to run system tests with browsers

@@ -241,6 +241,7 @@ DEPENDENCIES
   byebug
   capybara (>= 3.26)
   database_cleaner
+  database_cleaner-active_record
   factory_bot_rails (~> 4.0)
   faker
   jbuilder (~> 2.7)

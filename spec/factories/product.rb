@@ -1,6 +1,6 @@
 FactoryBot.define do
     factory :product do
-        name { "John" }
+        name { "Sport" }
         price  { 123456 }
         size {32 }
         color {"red"}

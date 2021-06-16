@@ -4,7 +4,6 @@ class ProductsController < ApplicationController
       @key = params[:key]
       @brand = params[:brand]
       temp = Product.all
-      puts params[:brand]
       if (@brand == "all") | (@brand == "") |(@brand == nil)
         temp.each do |item|
           if ((item.name.downcase.include?(@key.downcase))||(item.color.downcase.include?(@key.downcase)))
@@ -32,7 +31,6 @@ class ProductsController < ApplicationController
   
     def new
       @product = Product.new()
-      redirect_to "new"
     end
 
     def create
